@@ -1,4 +1,4 @@
-(defproject buildbot "0.1"
+(defproject com.plumbee/buildbot "0.1"
   :description "A Clojure Slack Bot to report on Jenkins jobs."
   :url "http://plumbee.com"
   :license {:name "Apache License"

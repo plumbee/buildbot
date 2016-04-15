@@ -1,4 +1,4 @@
-# Plumbot
+# Build Bot
 
 A Clojure Slack Bot to report on Jenkins jobs.
 

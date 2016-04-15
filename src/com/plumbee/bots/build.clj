@@ -2,6 +2,7 @@
   (:require [ring.util.codec :refer [url-encode base64-encode]]
             [clojure.data.json :as json]
             [clojure.string :as string]
+            [com.plumbee.plumbot.register :refer [->Bot ->Persona]]
             [com.plumbee.plumbot.support.persistence :refer [persistent-atom load-data]]
             [com.plumbee.plumbot.support.logging :as log]
             [com.plumbee.plumbot.support.message :refer [skin-tone join-seq de-link]]
@@ -308,3 +309,9 @@
                          state)
 
     :else state))
+
+(def build-bot (->Bot (->Persona "BuildBot" ":apertureblue:")
+                      ["Monitors specially configured Jenkins Views and reports on build breakages and fixes."
+                       "Add user aliases with e.g. `BuildBot: bob@plumbee.co.uk is @bob`"]
+                      handler
+                      state))
